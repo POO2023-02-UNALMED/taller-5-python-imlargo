@@ -6,7 +6,12 @@ class Ave(Animal):
     aguilas = 0
     
     def __init__(self, nombre, edad, habitat, genero, colorPlumas):
-        Animal.__init__(nombre, edad, habitat, genero)
+        super().__init__(nombre, edad, habitat, genero)
         self._colorPlumas = colorPlumas
         Ave._listado.append(self)
         pass
+    
+    def getColorPlumas(self):
+        return self._colorPlumas
+    def setColorPlumas(self, colorPlumas):
+        self._colorPlumas = colorPlumas
