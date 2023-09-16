@@ -22,7 +22,7 @@ class Pez(Animal):
 
     #----
     @classmethod
-    def cantidad (cls):
+    def cantidadPeces(cls):
         return len(cls._listado)
         
     def movimiento(self):
@@ -36,6 +36,6 @@ class Pez(Animal):
     
     @classmethod
     def crearBacalao(cls, nombre, edad, genero):
-        animal = Pez(nombre, edad, genero, "gris", 6)
+        animal = Pez(nombre, edad, "oceano", genero, "gris", 6)
         cls.bacalaos += 1
         return animal

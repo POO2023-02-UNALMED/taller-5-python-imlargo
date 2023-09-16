@@ -23,7 +23,7 @@ class Mamifero(Animal):
 
     #----
     @classmethod
-    def cantidad (cls):
+    def cantidadMamiferos(cls):
         return len(cls._listado)
         
     def movimiento(self):
