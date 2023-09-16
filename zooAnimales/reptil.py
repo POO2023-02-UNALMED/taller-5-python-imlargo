@@ -10,7 +10,6 @@ class Reptil(Animal):
         self._colorEscamas = colorEscamas
         self._largoCola = largoCola
         Reptil._listado.append(self)
-        pass
     
     def getColorEscamas(self):
         return self._colorEscamas
@@ -21,4 +20,23 @@ class Reptil(Animal):
     def setLargoCola(self, largoCola): 
         self._largoCola = largoCola
         
+    
+    #----
+    @classmethod
+    def cantidad (cls):
+        return len(cls._listado)
         
+    def movimiento(self):
+        return "reptar"
+    
+    @classmethod
+    def crearIguana(cls, nombre, edad, genero, ):
+        animal = Reptil(nombre, edad, genero, "verde", 3)
+        cls.iguanas += 1
+        return animal
+    
+    @classmethod
+    def crearSerpiene(cls, nombre, edad, genero):
+        animal = Reptil(nombre, edad, genero, "blanco", 1)
+        cls.serpientes += 1
+        return animal

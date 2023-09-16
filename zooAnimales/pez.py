@@ -10,7 +10,6 @@ class Pez(Animal):
         self._colorEscamas = colorEscamas
         self._cantidadAletas = cantidadAletas 
         Pez._listado.append(self)
-        pass
     
     def getColorEscamas(self):
         return self._colorEscamas
@@ -21,3 +20,22 @@ class Pez(Animal):
     def setCantidadAletas(self, cantidadAletas):
         self._cantidadAletas = cantidadAletas
 
+    #----
+    @classmethod
+    def cantidad (cls):
+        return len(cls._listado)
+        
+    def movimiento(self):
+        return "nadar"
+    
+    @classmethod
+    def crearSalmon(cls, nombre, edad, genero):
+        animal = Pez(nombre, edad, "oceano", genero, "rojo", 6)
+        cls.salmones += 1
+        return animal
+    
+    @classmethod
+    def crearBacalao(cls, nombre, edad, genero):
+        animal = Pez(nombre, edad, genero, "gris", 6)
+        cls.bacalaos += 1
+        return animal
