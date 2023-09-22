@@ -11,9 +11,9 @@ class Anfibio(Animal):
         self._venenoso = venenoso
         Anfibio._listado.append(self)
     
-    def getcolorPiel(self):
+    def getColorPiel(self):
         return self._colorPiel
-    def setcolorPiel(self, colorPiel):
+    def setColorPiel(self, colorPiel):
         self._colorPiel = colorPiel
     def isVenenoso(self):
         return self._venenoso

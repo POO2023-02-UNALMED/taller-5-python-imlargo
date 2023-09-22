@@ -8,7 +8,7 @@ class Animal:
         self._edad = edad
         self._habitat = habitat
         self._genero = genero
-        self._zonas = None
+        self._zona = None
         Animal._totalAnimales += 1
         
     #Set y get
@@ -31,6 +31,11 @@ class Animal:
     @classmethod
     def getTotalAnimales(cls):
         return cls._totalAnimales
+    #....
+    def getZona(self):
+        return self._zona
+    def setGenero(self, zona):
+        self._zona = zona
     
     #....
     def toString(self):
@@ -41,7 +46,7 @@ class Animal:
     
     @classmethod
     def totalPorTipo(cls):
-        return f"Mamiferos: {zooAnimales.mamifero.Mamifero.cantidadMamiferos()}\nAves: {zooAnimales.ave.Ave.cantidadAves()}\nReptiles: {zooAnimales.reptil.Reptil.cantidadReptiles()}\nPeces: {zooAnimales.pez.Pez.cantidadPeces()}\nAnfibios: {zooAnimales.anfibio.Anfibio.cantidadAnfibios()}"
+        return f"Mamiferos : {zooAnimales.mamifero.Mamifero.cantidadMamiferos()}\nAves : {zooAnimales.ave.Ave.cantidadAves()}\nReptiles : {zooAnimales.reptil.Reptil.cantidadReptiles()}\nPeces : {zooAnimales.pez.Pez.cantidadPeces()}\nAnfibios : {zooAnimales.anfibio.Anfibio.cantidadAnfibios()}"
     
     def movimiento(self):
         return "desplazarse"
