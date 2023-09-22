@@ -12,28 +12,28 @@ class Animal:
         Animal._totalAnimales += 1
         
     #Set y get
-    def get_nombre(self):
+    def getNombre(self):
         return self._nombre
-    def set_nombre(self, nuevo_nombre):
+    def setNombre(self, nuevo_nombre):
         self._nombre = nuevo_nombre
-    def get_edad(self):
+    def getEdad(self):
         return self._edad
-    def set_edad(self, nueva_edad):
+    def setEdad(self, nueva_edad):
         self._edad = nueva_edad
-    def get_habitat(self):
+    def getHabitat(self):
         return self._habitat
-    def set_habitat(self, nuevo_habitat):
+    def setHabitat(self, nuevo_habitat):
         self._habitat = nuevo_habitat
-    def get_genero(self):
+    def getGenero(self):
         return self._genero
-    def set_genero(self, nuevo_genero):
+    def setGenero(self, nuevo_genero):
         self._genero = nuevo_genero
     @classmethod
-    def get_total_animales(cls):
+    def getTotalAnimales(cls):
         return cls._totalAnimales
     
     #....
-    def __str__(self):
+    def toString(self):
         if (self._zonas != None):
             return f"Mi nombre es {self._nombre}, tengo una edad de {self._edad}, habito en {self._habitat} y mi genero es {self._genero}, la zona en la que me ubico es {self._zona.getNombre()}, en el {((self._zona).getZoo())}"
         else:
