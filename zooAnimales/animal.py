@@ -34,7 +34,7 @@ class Animal:
     #....
     def getZona(self):
         return self._zona
-    def setGenero(self, zona):
+    def setZona(self, zona):
         self._zona = zona
     
     #....
